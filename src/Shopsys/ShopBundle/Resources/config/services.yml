@@ -97,3 +97,6 @@ services:
       $menuFactory: '@knp_menu.factory'
     tags:
       - { name: knp_menu.menu_builder, method: createMenu, alias: admin_side_menu }
+
+  Shopsys\FrameworkBundle\Model\Advert\AdvertPositionRegistry:
+    class: Shopsys\ShopBundle\Model\Advert\AdvertPositionRegistry

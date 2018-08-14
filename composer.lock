@@ -5245,12 +5245,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/shopsys/framework.git",
-                "reference": "218382efd3265ca96e54b15b5a36f07d034e43af"
+                "reference": "789104c273fdba612624ba0a764d16357314fc33"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/shopsys/framework/zipball/218382efd3265ca96e54b15b5a36f07d034e43af",
-                "reference": "218382efd3265ca96e54b15b5a36f07d034e43af",
+                "url": "https://api.github.com/repos/shopsys/framework/zipball/789104c273fdba612624ba0a764d16357314fc33",
+                "reference": "789104c273fdba612624ba0a764d16357314fc33",
                 "shasum": ""
             },
             "require": {
@@ -5346,7 +5346,7 @@
                 "proprietary"
             ],
             "description": "Core of Shopsys Framework - open source framework for building large, scalable, fast-growing e-commerce projects based on Symfony",
-            "time": "2018-08-10T10:29:24+00:00"
+            "time": "2018-08-13T14:42:16+00:00"
         },
         {
             "name": "shopsys/migrations",

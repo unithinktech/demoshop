@@ -23,7 +23,11 @@ class ProductFilterPage extends AbstractPage
      */
     public function setMinimalPrice($price)
     {
-        $this->tester->fillFieldByCss('#product_filter_form_minimalPrice', $price . WebDriverKeys::ENTER);
+        /**
+         * The input for minimal price is hidden by design so Codeception is not able to fill it directly.
+         * There is a jQueryUI price slider in the filter form but making Codeception to handle it correctly would be overkill.
+         */
+        $this->tester->executeJS(sprintf('$("#product_filter_form_minimalPrice").val(%d).change()', $price));
         $this->waitForFilter();
     }
 
@@ -32,7 +36,11 @@ class ProductFilterPage extends AbstractPage
      */
     public function setMaximalPrice($price)
     {
-        $this->tester->fillFieldByCss('#product_filter_form_maximalPrice', $price . WebDriverKeys::ENTER);
+        /**
+         * The input for maximal price is hidden by design so Codeception is not able to fill it directly.
+         * There is a jQueryUI price slider in the filter form but making Codeception to handle it correctly would be overkill.
+         */
+        $this->tester->executeJS(sprintf('$("#product_filter_form_maximalPrice").val(%d).change()', $price));
         $this->waitForFilter();
     }
 
@@ -41,7 +49,7 @@ class ProductFilterPage extends AbstractPage
      */
     public function filterByBrand($label)
     {
-        $this->tester->checkOptionByLabel($label);
+        $this->tester->clickByCss('.js-brand-filter-label-' . $label);
         $this->waitForFilter();
     }
 
